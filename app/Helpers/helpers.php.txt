@@ -1,0 +1,13 @@
+if (!function_exists('json_response')) {
+	function json_response(
+		$flag = false,
+		$message = 'Someting went wrong',
+		$data = []
+	) {
+		$response['FLAG'] = $flag;
+		$response['MESSAGE'] = $message;
+		$response['DATA'] = $data;
+
+		return $response;
+	}
+}
